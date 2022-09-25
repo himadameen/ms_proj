@@ -1,38 +1,314 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu_main {
+  height: 10vh;
+  padding-top: 10px;
+  padding-left: 30px;
+  background-color: #F9F3EE;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu_main .txt {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: oblique;
+  line-height: 30px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu_main .txt span {
+  color: plum;
+}
+
+/* left Panel */
+
+.main {
+  width: 15%;
+  height: 90vh;
+  background-color: #f9f9f9;
+}
+
+.main .links {
   display: flex;
   flex-direction: column;
+  margin-left: 25px;
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.main .links .item {
+  list-style: none;
+}
+
+.main .links .item .item_n {
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+  cursor: pointer;
+}
+
+.main .links .item .item_n:hover {
+  background-color: plum;
+  color: white;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 2px 20px;
+}
+
+.main .upload_box {
+  margin-top: 5rem;
+  margin-left: 25px;
+}
+
+.main .upload_box .upload {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.main .upload_box .upload:hover {
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 2px 20px;
+}
+
+/* login */
+
+.body {
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+}
+
+.body .for {
+  border: 2px solid grey;
+  width: 25%;
+  height: 80vh;
+  border-radius: 10px;
+}
+
+.body .title {
+  height: 40vh;
+  width: 45.8vh;
+  background-image: linear-gradient(135deg, #9796f0 10%, #FBC7D4 100%);
+  position: absolute;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+}
+
+@media screen and (max-width: 1030px) {
+  .body .title {
+    width: 36.8vh;
+  }
+
+  .body .for .form {
+    padding-top: 10vh;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .body .title {
+    width: 34.8vh;
+  }
+
+  .body .for .form {
+    padding-top: 10vh;
+  }
+
+  .body .for .form .input {
+    padding: 5px 15px;
+  }
+}
+
+.body .title .head {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 40px;
+  padding-bottom: 60px;
+  line-height: 45px;
+  font-style: oblique;
+  letter-spacing: 10px;
+  word-spacing: 3px;
+  text-transform: capitalize;
+
+}
+
+.body .for .form {
+  display: flex;
+  margin-top: 90%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.body .for .form input {
+  padding: 5px 20px;
+  border-radius: 10px;
+  margin: 6px;
+  border: 1px solid grey;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.body .for .form input::placeholder {
+  font-size: 10px;
+  font-style: oblique;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.body .for .form .err {
+  color: red;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-style: italic;
+  padding: 3px;
+  transform: translateX(-42%);
+}
+
+.body .for .btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.body .for .btn button {
+  padding: 5px 25px;
+  border-radius: 10px;
+  border: 1px solid greenyellow;
+  background-color: #f9f9f9;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.body .for .btn button:hover {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+/* task - page */
+
+.task_main {
+  position: absolute;
+  top: 69px;
+  width: 85%;
+  height: 90vh;
+  margin-left: 15%;
+  /* background-color: beige; */
+}
+
+.task_main .content {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.task_main .content .head {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding-left: 4rem;
+  padding-bottom: 25px;
+}
+
+.task_main .content .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #EEF1FF;
+  font-size: 15px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.task_main .content .title input {
+  cursor: pointer;
+}
+
+.task_main .content .data {
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-around;
+  max-width: 95%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #EEF1FF;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.task_main .content .data .inp {
+  transform: translateX(7px);
+}
+
+.task_main .content .data .t1 {
+  transform: translateX(10px);
+}
+
+.task_main .content .data .t2 {
+  transform: translateX(15px);
+}
+
+.task_main .content .data .t3 {
+  transform: translateX(40px);
+}
+
+.task_main .content .data .t4 {
+  transform: translateX(30px);
+}
+
+/* pagination */
+
+.page {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.progress {
+  width: 100%;
+  height: 90vh;
+  background-color: #f9f9f9;
+}
+
+.task_main .txt_p {
+  height: 70vh;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-style: oblique;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* download */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.download {
+  width: 35%;
+  height: 90vh;
+  margin-left: 65%;
+  background-color: #F9F9F9;
 }
